@@ -1,0 +1,148 @@
+#bottom{
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:10vh;
+    width:100%;
+    background-color: #3e3e3e;
+    overflow-y: hidden;
+}
+#bottom_mid{
+    width: calc(100% - 10vh);
+}
+#logo{
+    width: 10vh;
+    height: 10vh;
+    background-color: #0a6b71;
+}
+
+#searchbox{
+    width:50%;
+    height:10vh;
+    color: darkslategray;
+    border-color: transparent;
+    text-transform: uppercase;
+    font-size: 5vh;
+}
+.bottom_bits{
+    float:right;
+    display:inline-block;
+    vertical-align: top;
+    height:10vh;
+    width:13vh;
+    font-size: 3vh;
+    color: white;
+    text-align: center;
+}
+.popup_bottom_bits{
+    position:absolute;
+    height:10vh;
+    width: 30vh;
+    font-size: 3vh;
+    color: white;
+    text-align: center;
+    border-top: 2px solid grey;
+}
+#login_1{
+    top: 0vh;
+    background-color: #3e3e3e;
+}
+#contact_1{
+    top:10vh;
+    background-color: #3e3e3e;
+}
+#about_1{
+    top:20vh;
+    background-color: #3e3e3e;
+}
+#settings_1{
+    top:30vh;
+    background-color: #3e3e3e;
+}
+.center{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    padding: 1px;
+}
+.inline{
+    float: left;
+    height:100%;
+    vertical-align: top;
+}
+#arrow_up{
+    width: 5vh;
+    height: 10vh;
+    color: white;
+    text-align: center;
+    background-color: #0a6b71;
+}
+#popup_bottom{
+    display: none;
+    position: absolute;
+    bottom: 10vh;
+    right:0px;
+    height: 40vh;
+    width: 30vh;
+}
+#arrow_up {
+    display: none;
+}
+@media only screen and (max-aspect-ratio: 6/5) {
+    #bottom_mid{
+        width: calc(100% - 15vh);
+    }
+    #searchbox{
+        width:100%;
+    }
+    #settings {
+        display: none;
+    }
+    #login {
+        display: none;
+    }
+    #contact {
+        display: none;
+    }
+    #about {
+        display: none;
+    }
+    #arrow_up {
+        display: block;
+    }
+}
+#content{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 90vh;
+    width: 100vw;
+    overflow-y: scroll;
+    text-align: center;
+}
+.tile{
+    display: inline-block;
+    vertical-align: top;
+    width: 22vw;
+    height: 11vw;
+    background-color: #e7e9cf;
+    margin: 1vw;
+}
+@media only screen and (max-width: 1800px) and (min-width: 1100px) {
+    .tile{
+        width: 30vw;
+        height: 15vw;
+    }
+}
+@media only screen and (max-width: 1099px) and (min-width: 600px) {
+    .tile{
+        width: 46vw;
+        height: 23vw;
+    }
+}
+@media only screen and (max-width: 599px)  {
+    .tile{
+        width: 90vw;
+        height: 45vw;
+    }
+}
