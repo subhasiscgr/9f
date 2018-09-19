@@ -1,5 +1,4 @@
-/**
- /*<9f: generic source code for web blog.>
+/*<9f: generic source code for web blog.>
  Copyright (C) 2018  Subhasis Banerjee
 
  This program is free software: you can redistribute it and/or modify
@@ -14,7 +13,6 @@
 
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
  */
 
 window.onload = function () {
