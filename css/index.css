@@ -16,33 +16,88 @@ Copyright (C) 2018  Subhasis Banerjee
 */
 #bottom{
     position:absolute;
-    bottom:0;
+    top:0;
     left:0;
     height:10vh;
     width:100%;
     background-color: #3e3e3e;
     overflow-y: hidden;
 }
-#bottom_mid{
-    width: calc(100% - 10vh);
-}
-#logo{
+#arrow_up{
+    left:0;
     width: 10vh;
     height: 10vh;
+    color: white;
+    text-align: center;
     background-color: #0a6b71;
+    display: none;
+    float:left;
+    font-size: 7vh;
 }
-
+#bottom_mid{
+    width: calc(100% - 20vh);
+}
+#logo{
+    display: table;
+    width: 20vh;
+    height: 10vh;
+    top:0;
+    left:0;
+    background-color: #0a6b71;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 6vh;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+#mag_glass{
+    display: none;
+    width: 10vh;
+    height: 10vh;
+    top:0;
+    left:0;
+    background-color: #0a6b71;
+    font-weight: bold;
+    font-size: 7vh;
+    color: white;
+    text-align: center;
+}
 #searchbox{
-    width:50%;
+    width:46%;
     height:10vh;
-    color: darkslategray;
+    color: grey;
     border-color: transparent;
     text-transform: uppercase;
     font-size: 5vh;
+    background-color: #F1F3FF;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.none{
+    display:none;
+}
+#searchbox2{
+    position:absolute;
+    top:0.3vh;
+    left:10vh;
+    width:calc(95% - 20vh);
+    height:9vh;
+    color: #3e3e3e;
+    border:transparent;
+    font-size: 4vh;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 2;
 }
 .bottom_bits{
     float:right;
-    display:inline-block;
+    display:table;
     vertical-align: top;
     height:10vh;
     width:13vh;
@@ -50,10 +105,23 @@ Copyright (C) 2018  Subhasis Banerjee
     color: white;
     text-align: center;
 }
+#popup_bottom{
+    position: absolute;
+    top:10vh;
+    height:90vh;
+    width: 40vw;
+    left:-40vw;
+    background-color: #3e3e3e;
+    transition-duration: 0.5s;
+}
+.popup_bottom_expand{
+    display:block;
+    transform: translate(40vw, 0vw);
+}
 .popup_bottom_bits{
     position:absolute;
     height:10vh;
-    width: 30vh;
+    width: 100%;
     font-size: 3vh;
     color: white;
     text-align: center;
@@ -61,19 +129,15 @@ Copyright (C) 2018  Subhasis Banerjee
 }
 #login_1{
     top: 0vh;
-    background-color: #3e3e3e;
 }
 #contact_1{
     top:10vh;
-    background-color: #3e3e3e;
 }
 #about_1{
     top:20vh;
-    background-color: #3e3e3e;
 }
 #settings_1{
     top:30vh;
-    background-color: #3e3e3e;
 }
 .center{
     margin: auto;
@@ -86,30 +150,19 @@ Copyright (C) 2018  Subhasis Banerjee
     height:100%;
     vertical-align: top;
 }
-#arrow_up{
-    width: 5vh;
-    height: 10vh;
-    color: white;
-    text-align: center;
-    background-color: #0a6b71;
-}
-#popup_bottom{
-    display: none;
-    position: absolute;
-    bottom: 10vh;
-    right:0px;
-    height: 40vh;
-    width: 30vh;
-}
-#arrow_up {
-    display: none;
-}
+
 @media only screen and (max-aspect-ratio: 6/5) {
+    #logo{
+        width: calc(100% - 20vh);
+    }
+    #mag_glass{
+        display: table;
+    }
     #bottom_mid{
-        width: calc(100% - 15vh);
+        display:none;
     }
     #searchbox{
-        width:100%;
+        width:40vw;
     }
     #settings {
         display: none;
@@ -124,12 +177,12 @@ Copyright (C) 2018  Subhasis Banerjee
         display: none;
     }
     #arrow_up {
-        display: block;
+        display: table;
     }
 }
 #content{
     position:absolute;
-    top:0;
+    top:10vh;
     left:0;
     height: 90vh;
     width: 100vw;
@@ -157,7 +210,7 @@ Copyright (C) 2018  Subhasis Banerjee
         width: 10vw;
     }
 }
-@media only screen and (max-width: 1099px) and (min-width: 600px) {
+@media only screen and (max-width: 1099px) and (min-width: 800px) {
     .tile{
         width: 45vw;
         height: 15vw;
@@ -166,7 +219,7 @@ Copyright (C) 2018  Subhasis Banerjee
         width: 15vw;
     }
 }
-@media only screen and (max-width: 599px)  {
+@media only screen and (max-width: 799px)  {
     .tile{
         width: 90vw;
         height: 30vw;
