@@ -25,6 +25,25 @@ window.onload = function () {
     mag_glass.addEventListener('click', function (event) {
         expand_search();
     }, false);
+    var settings = document.getElementById("settings");
+    settings.addEventListener('click', function (event) {
+        expand_settings();
+    }, false);
+    var searchbox = document.getElementById("searchbox");
+    searchbox.addEventListener('keypress', function (event) {
+        search(searchbox);
+    }, false);
+    searchbox.addEventListener('paste', function (event) {
+        search(searchbox);
+    }, false);
+    var searchbox2 = document.getElementById("searchbox2");
+    searchbox2.addEventListener('keypress', function (event) {
+        search(searchbox);
+    }, false);
+    searchbox2.addEventListener('paste', function (event) {
+        search(searchbox2);
+    }, false);
+
 };
 window.onresize = function() {
     document.getElementById("popup_bottom").classList.remove('popup_bottom_expand');
@@ -60,9 +79,12 @@ function postData(url, data)
     request.send(data);
 }
 
-function popup_bottom_bits(){
+function popup_bottom_bits() {
     document.getElementById("popup_bottom").classList.toggle('popup_bottom_expand');
 }
-function expand_search(){
+function expand_search() {
     document.getElementById("searchbox2").classList.toggle('none');
+}
+function expand_settings() {
+    document.getElementById("popup_settings").classList.toggle('popup_settings_expand');
 }
