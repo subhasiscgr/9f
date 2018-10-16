@@ -20,6 +20,7 @@ function retract_all() {
     document.getElementById("searchbox2").classList.add('none');
     document.getElementById("popup_settings").classList.remove('popup_settings_expand');
     document.getElementById("loginbox").classList.add('none');
+
 }
 window.onload = function () {
 
@@ -33,6 +34,10 @@ window.onload = function () {
     }, false);
     var settings = document.getElementById("settings");
     settings.addEventListener('click', function (event) {
+        expand_settings();
+    }, false);
+    var settings1 = document.getElementById("settings1");
+    settings1.addEventListener('click', function (event) {
         expand_settings();
     }, false);
     var searchbox = document.getElementById("searchbox");
@@ -71,12 +76,13 @@ document.onclick = function(e){
 
     var target = (e && e.target) || (event && event.srcElement);
     while (target.parentNode) {
-        if (target.id == "popup_bottom" || target.id == "arrow_up") {
+        if (target.id == "popup_bottom" || target.id == "arrow_up" || target.id == "settings") {
             return;
         }
         target = target.parentNode;
     }
     document.getElementById("popup_bottom").classList.remove('popup_bottom_expand');
+    document.getElementById("popup_settings").classList.remove('popup_settings_expand');
 
 }
 
