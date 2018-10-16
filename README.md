@@ -1,2 +1,2 @@
 # 9f
-Responsive web design with minimal javascript
+Responsive web design template with minimal javascript
