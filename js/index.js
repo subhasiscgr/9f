@@ -15,6 +15,12 @@
  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+function retract_all() {
+    document.getElementById("popup_bottom").classList.remove('popup_bottom_expand');
+    document.getElementById("searchbox2").classList.add('none');
+    document.getElementById("popup_settings").classList.remove('popup_settings_expand');
+    document.getElementById("loginbox").classList.add('none');
+}
 window.onload = function () {
 
     var ar_up = document.getElementById("arrow_up");
@@ -43,11 +49,23 @@ window.onload = function () {
     searchbox2.addEventListener('paste', function (event) {
         search(searchbox2);
     }, false);
+    var login = document.getElementById("login");
+    login.addEventListener('click', function (event) {
+        toggle_login_overlay();
+    }, false);
+    var cancel1 = document.getElementById("cancel1");
+    cancel1.addEventListener('click', function (event) {
+        toggle_login_overlay();
+    }, false);
+    document.body.addEventListener('keydown', function(e) {
+        if(e.key == "Escape"){
+            retract_all();
+        }
+    });
 
 };
 window.onresize = function() {
-    document.getElementById("popup_bottom").classList.remove('popup_bottom_expand');
-    document.getElementById("searchbox2").classList.add('none');
+    retract_all();
 }
 document.onclick = function(e){
 
@@ -87,4 +105,7 @@ function expand_search() {
 }
 function expand_settings() {
     document.getElementById("popup_settings").classList.toggle('popup_settings_expand');
+}
+function toggle_login_overlay() {
+    document.getElementById("loginbox").classList.toggle('none');
 }

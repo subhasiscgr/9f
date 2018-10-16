@@ -1,12 +1,11 @@
-/*W3Schools checkbox
+/*W3Schools checkbox -modified by Subhasis Banerjee for responsive design
 /* The container */
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 5vh;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -25,8 +24,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 4vh;
+    width: 4vh;
     background-color: #cccccc;
 }
 

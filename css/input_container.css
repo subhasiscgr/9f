@@ -1,0 +1,39 @@
+/* Author: Nitheesh Modified by Subhasis Banerjee
+*/
+.input-container{
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0 auto;
+    width: 100%;
+    height: 5vh;
+    border: 1px solid #3e3e3e;
+}
+.input-container input:focus, .input-container input:active {
+    outline: none;
+}
+.input-container input {
+    width: calc(100% - 5vh);
+    height:5vh;
+    font-size: 2.5vh;
+    line-height: 100%;
+    text-align: center;
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.input-container button {
+    float: right;
+    width: 5vh;
+    height: 5vh;
+    outline: none;
+    background-color: #3e3e3e;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    cursor: pointer;
+    box-sizing: border-box;
+}
