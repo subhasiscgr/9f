@@ -106,7 +106,13 @@ function postData(url, data)
 }
 
 function popup_bottom_bits() {
-    document.getElementById("popup_bottom").classList.toggle('popup_bottom_expand');
+    if (document.getElementById("popup_settings").classList.contains('popup_settings_expand_inset')) {
+        document.getElementById("popup_settings").classList.toggle('popup_settings_expand_inset');
+    }
+    else {
+        document.getElementById("popup_bottom").classList.toggle('popup_bottom_expand');
+
+    }
 }
 function expand_search() {
     document.getElementById("searchbox2").classList.toggle('none');
