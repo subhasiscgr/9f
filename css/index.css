@@ -185,7 +185,7 @@ Copyright (C) 2018  Subhasis Banerjee
         left: -100%;
     }
     #popup_settings_container {
-        left: 0vh;
+        left: 0px;
     }
 }
 @media not screen and (max-aspect-ratio: 6/5) {
@@ -257,7 +257,7 @@ Copyright (C) 2018  Subhasis Banerjee
     top:10vh;
     height:90vh;
     width: 35vh;
-    right: 0;
+    right: 0px;
     background-color: transparent;
     overflow-x:hidden;
     pointer-events: none;
@@ -267,7 +267,7 @@ Copyright (C) 2018  Subhasis Banerjee
     position: absolute;
     top: 0vh;
     height: 100%;
-    width: 100%;
+    width: 85%;
     background-color: #F1F3FF;
     transition-duration: 0.5s;
     color: #3e3e3e;
