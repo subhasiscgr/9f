@@ -181,6 +181,17 @@ Copyright (C) 2018  Subhasis Banerjee
     #arrow_up {
         display: table;
     }
+    #popup_settings {
+        left: -100%;
+    }
+    #popup_settings_container {
+        left: 0vh;
+    }
+}
+@media not screen and (max-aspect-ratio: 6/5) {
+    #popup_settings {
+        left: 100%;
+    }
 }
 #content{
     position:absolute;
@@ -257,7 +268,6 @@ Copyright (C) 2018  Subhasis Banerjee
     top: 0vh;
     height: 100%;
     width: 100%;
-    left: 100%;
     background-color: #F1F3FF;
     transition-duration: 0.5s;
     color: #3e3e3e;
@@ -266,6 +276,9 @@ Copyright (C) 2018  Subhasis Banerjee
 }
 .popup_settings_expand{
     transform: translate(-35vh, 0vw);
+}
+.popup_settings_expand_inset{
+    transform: translate(35vh, 0vw);
 }
 .settings_bits{
     position:absolute;
